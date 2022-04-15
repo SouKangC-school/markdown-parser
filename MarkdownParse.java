@@ -21,7 +21,7 @@ public class MarkdownParse {
             }
             currentIndex = closeParen + 1;
 
-            if(markdown.indexOf("[", closeParen) == -1) {
+            if(markdown.indexOf("[", currentIndex) == -1 || markdown.indexOf("(", currentIndex) == -1) {
                 break;
             }
         }
