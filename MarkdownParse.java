@@ -22,6 +22,7 @@ public class MarkdownParse {
                 }
             }
             currentIndex = closeParen + 1;
+            System.out.println("new addition");
 
             if(markdown.indexOf("[", currentIndex) == -1 || markdown.indexOf("(", currentIndex) == -1) {
                 break;
