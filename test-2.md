@@ -6,6 +6,14 @@ d
 awd
 a
 dw
+[correctlink](link-here.html)
 da
 da
-da
+[link]example-file.html
+[link]example-file.html
+[link]example-file.html
+aaa
+a
+a[link]example-file.html
+[link]example-file.html
+link](file)
