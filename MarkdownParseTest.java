@@ -9,18 +9,12 @@ public class MarkdownParseTest {
     @Test
     public void testSingle() throws IOException {
         List<String> temp = MarkdownParse.getLinks(Files.readString(Path.of("new-test.md")));
-        List<String> expected = List.of("https://something.com", "some-thing.html", "MADE TO FAIL CI TEST");
+        List<String> expected = List.of("https://something.com", "some-thing.html");
     }
     @Test
     public void testForTestFile() throws IOException {
         List<String> temp = MarkdownParse.getLinks(Files.readString(Path.of("test-file.md")));
         List<String> expected = List.of("https://something.com", "some-thing.html");
-        assertEquals(expected, temp);
-    }
-    @Test
-    public void testForNewTest() throws IOException {
-        List<String> temp = MarkdownParse.getLinks(Files.readString(Path.of("new-test.md")));
-        List<String> expected = List.of("https://something.com", "some-thing.html", "image.png");
         assertEquals(expected, temp);
     }
     @Test
