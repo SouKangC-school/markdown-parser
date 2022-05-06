@@ -16,11 +16,11 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            if(openParen != -1 && closeParen != -1) {
+            //if(openParen != -1 && closeParen != -1) {
                 if(closeBracket == openParen - 1) {
                     toReturn.add(markdown.substring(openParen + 1, closeParen));
                 }
-            }
+            //}
             currentIndex = closeParen + 1;
             System.out.println("new addition");
 
@@ -32,7 +32,7 @@ public class MarkdownParse {
         // index -> 44, 70
         // length -> 72
 
-        // length -> 70
+        String temp = "This is a test";
         return toReturn;
     }
 }
